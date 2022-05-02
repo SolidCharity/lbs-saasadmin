@@ -11,7 +11,7 @@ VER=$VERSION_ID
 
 if [[ "$OS" == "Ubuntu" || "$OS" == "Debian GNU/Linux" ]]
 then
-    packages="git sqlite gettext python3-venv"
+    packages="git sqlite3 gettext python3-venv"
     apt-get -y install $packages || exit -1
 else
     dnf -y install git sqlite gettext || exit -1
