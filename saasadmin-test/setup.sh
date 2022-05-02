@@ -11,11 +11,7 @@ VER=$VERSION_ID
 
 if [[ "$OS" == "Ubuntu" || "$OS" == "Debian GNU/Linux" ]]
 then
-    packages="git sqlite gettext"
-    if [[ "$VER" == "20.04" ]]
-    then
-        packages="$packages python3.8-venv"
-    fi
+    packages="git sqlite gettext python3-venv"
     apt-get -y install $packages || exit -1
 else
     dnf -y install git sqlite gettext || exit -1
