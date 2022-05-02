@@ -14,7 +14,8 @@ then
     packages="git sqlite3 gettext python3-venv"
     apt-get -y install $packages || exit -1
 else
-    dnf -y install git sqlite gettext || exit -1
+    packages="git sqlite gettext"
+    dnf -y install $packages || exit -1
 fi
 
 git clone --branch $branch --depth 5 https://github.com/SolidCharity/saasadmin.git
