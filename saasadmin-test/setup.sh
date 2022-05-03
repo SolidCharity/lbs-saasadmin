@@ -20,6 +20,7 @@ fi
 
 git clone --branch $branch --depth 5 https://github.com/SolidCharity/saasadmin.git
 cd saasadmin
+export LANG=en_US.UTF-8
 make quickstart || exit -1
 make collectstatic || exit -1
 make messages || exit -1
