@@ -22,7 +22,7 @@ else
     else
         yum -y install epel-release || exit -1
     fi
-    if [[ "$VER" == "8" || "$VER" == "9" ]]; then
+    if [[ "$VER" == "8" ]]; then
         yum -y install python39-devel || exit -1
         alternatives --set python3 /usr/bin/python3.9 || exit -1
     fi
