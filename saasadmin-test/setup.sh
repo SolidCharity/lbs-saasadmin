@@ -14,7 +14,7 @@ then
     packages="git sqlite3 gettext python3-venv"
     apt-get -y install $packages || exit -1
 else
-    packages="git sqlite gettext"
+    packages="git sqlite gettext python3"
     dnf -y install $packages || exit -1
 fi
 
