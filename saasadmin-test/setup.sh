@@ -19,7 +19,7 @@ else
 
     if [[ "$VER" == "9" ]]; then
         yum -y install https://dl.fedoraproject.org/pub/epel/epel-release-latest-9.noarch.rpm || exit -1
-    else if [[ "$VER" == "8" ]]; then
+    elif [[ "$VER" == "8" ]]; then
         yum -y install epel-release || exit -1
     fi
     if [[ "$VER" == "8" ]]; then
