@@ -11,7 +11,7 @@ VER=$VERSION_ID
 
 if [[ "$OS" == "Ubuntu" || "$OS" == "Debian GNU/Linux" ]]
 then
-    packages="git sqlite3 gettext python3-venv python3-wheel python3-dev python3-pip zlib1g-dev libjpeg-dev libpng-dev"
+    packages="git sqlite3 gettext python3-venv python3-wheel python3-dev python3-pip pipenv zlib1g-dev libjpeg-dev libpng-dev"
     # packages required for pyenv
     packages="$packages libbz2-dev libncurses-dev libffi-dev libssl-dev libreadline-dev libsqlite3-dev liblzma-dev"
     apt-get -y install $packages || exit -1
@@ -29,7 +29,7 @@ else
         alternatives --set python3 /usr/bin/python3.9 || exit -1
     fi
 
-    yum -y install python3-pip
+    yum -y install python3-pip pipenv
 fi
 
 git clone --branch $branch --depth 5 https://github.com/SolidCharity/saasadmin.git -b TP-20230909-makefile_issues
