@@ -28,6 +28,8 @@ else
         yum -y install python39-devel || exit -1
         alternatives --set python3 /usr/bin/python3.9 || exit -1
     fi
+
+    yum -y install python3-pip
 fi
 
 git clone --branch $branch --depth 5 https://github.com/SolidCharity/saasadmin.git -b TP-20230909-makefile_issues
