@@ -30,7 +30,7 @@ else
     fi
 fi
 
-git clone --branch $branch --depth 5 https://github.com/SolidCharity/saasadmin.git TP-20230909-makefile_issues
+git clone --branch $branch --depth 5 https://github.com/SolidCharity/saasadmin.git -b TP-20230909-makefile_issues
 cd saasadmin
 make quickstart || exit -1
 make collectstatic || exit -1
