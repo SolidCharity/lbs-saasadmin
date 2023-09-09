@@ -12,6 +12,8 @@ VER=$VERSION_ID
 if [[ "$OS" == "Ubuntu" || "$OS" == "Debian GNU/Linux" ]]
 then
     packages="git sqlite3 gettext python3-venv python3-wheel python3-dev zlib1g-dev libjpeg-dev libpng-dev"
+    # packages required for pyenv
+    packages="$packages libbz2-dev libncurses-dev libffi-dev libssl-dev libreadline-dev libsqlite3-dev liblzma-dev"
     apt-get -y install $packages || exit -1
 else
     packages="git sqlite gettext"
@@ -28,7 +30,7 @@ else
     fi
 fi
 
-git clone --branch $branch --depth 5 https://github.com/SolidCharity/saasadmin.git
+git clone --branch $branch --depth 5 https://github.com/SolidCharity/saasadmin.git TP-20230909-makefile_issues
 cd saasadmin
 make quickstart || exit -1
 make collectstatic || exit -1
