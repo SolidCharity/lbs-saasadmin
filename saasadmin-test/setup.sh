@@ -15,6 +15,11 @@ then
     # packages required for pyenv
     packages="$packages libbz2-dev libncurses-dev libffi-dev libssl-dev libreadline-dev libsqlite3-dev liblzma-dev"
     apt-get -y install $packages || exit -1
+
+    if [[ "$OS" == "Debian GNU/Linux" ]]
+    then
+        apt-get -y install pipenv || exit -1
+    fi
 else
     packages="git sqlite gettext"
     dnf -y install $packages || exit -1
