@@ -37,7 +37,7 @@ else
     yum -y install python3-pip
 fi
 
-git clone --branch $branch --depth 5 https://github.com/SolidCharity/saasadmin.git
+git clone --branch $branch --depth 5 https://codeberg.org/solidcharity/saasadmin.git
 cd saasadmin
 make quickstart || exit -1
 make collectstatic || exit -1
